@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Раздели на 2 текста</title>
+    <link rel="stylesheet" href="../../main/style-extra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="../../main/index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <span>Раздели на 2 текста</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="main-title">Выберите задание</h1>
+            <p class="subtitle">Нажмите на плитку, чтобы начать выполнение задания</p>
+            
+            <div class="tiles-container">
+                <!-- Задание 1 -->
+                <div class="task-tile" id="task1-tile">
+                    <div class="task-icon">
+                        <i class="fas fa-1"></i>
+                    </div>
+                    <h2 class="task-title">Задание 1</h2>
+                    <div class="task-description">
+                        <p>Внимательно прочитайте все предложения. Подумайте и распределите все предложения в два столбика, в зависимости от темы. </p>
+                    </div>
+                    <div class="task-footer">
+                        <button class="task-button" onclick="location.href='task1_split.html'">Начать задание</button>
+                    </div>
+                </div>
+                
+                <!-- Задание 2 -->
+                <div class="task-tile" id="task2-tile">
+                    <div class="task-icon">
+                        <i class="fas fa-2"></i>
+                    </div>
+                    <h2 class="task-title">Задание 2</h2>
+                    <div class="task-description">
+                        <p>Внимательно прочитайте все предложения. Подумайте и распределите все предложения в два столбика, в зависимости от темы.</p>
+                    </div>
+                    <div class="task-footer">
+                        <button class="task-button" onclick="location.href='task2_split.html'">Начать задание</button>
+                    </div>
+                </div>
+                
+                <!-- Задание 3 -->
+                <div class="task-tile" id="task3-tile">
+                    <div class="task-icon">
+                        <i class="fas fa-3"></i>
+                    </div>
+                    <h2 class="task-title">Задание 3</h2>
+                    <div class="task-description">
+                        <p>Внимательно прочитайте все предложения. Подумайте и распределите все предложения в два столбика, в зависимости от темы.</p>
+                    </div>
+                    <div class="task-footer">
+                        <button class="task-button" onclick="location.href='task3_split.html'">Начать задание</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Инструкция -->
+            <div class="instruction-box">
+                <h3><i class="fas fa-graduation-cap"></i> Как выполнять задание</h3>
+                <ol>
+                    <li>Прочитайте внимательно предложения</li>
+                    <li>Обратите внимание на названия столбцов в таблице</li>
+                    <li>Распределите все предложения по столбцам в зависимости от темы</li>
+                    <li>Проверьте свой выбор и нажмите "Завершить"</li>
+                </ol>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../main/script-extra.js"></script>
+</body>
+</html>

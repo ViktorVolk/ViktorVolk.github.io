@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3 - Найди лишнее предложение</title>
+    <link rel="stylesheet" href="../style-task1_es.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="extra-sentence.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <span>Задание 3 - Найди лишнее предложение</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Текст задания -->
+            <div class="task-text-container">
+                <h2 class="task-title">Прочитайте текст и найдите лишние предложения:</h2>
+                <div class="text-content">
+                    <p>Мой лучший друг - это кот по имени Барсик. Он живет у нас уже три года. Барсик очень умный и ласковый кот. Он любит, когда его гладят за ушком и чешут подбородок.</p>
+                    
+                    <p>Каждый день утром он будит меня, трогая лапкой за щеку. Потом мы завтракаем вместе: я ем кашу, а Барсик получает свой корм. После завтрака он обычно идет к окну и наблюдает за птицами.</p>
+                    
+                    <p>Барсик обожает играть с мячиком и ленточкой. У него есть любимая игрушка - мышка из меха, с которой он никогда не расстается. Иногда он приносит ее мне в зубах, чтобы я с ним поиграл.</p>
+                    
+                    <p>Моя сестра учится играть на пианино и каждый день упражняется по два часа. Барсик любит слушать музыку и часто засыпает под звуки фортепиано. Когда он спит, он свертывается калачиком на своем мягком лежаке.</p>
+                    
+                    <p>Собаки обычно более активны и требуют больше прогулок, чем кошки. Барсик не любит гулять на улице, он настоящий домосед. Он самый лучший друг, и я очень рад, что он у меня есть.</p>
+                    
+                    <p><strong>Найдите предложения, которые не относятся к рассказу о коте Барсике.</strong></p>
+                </div>
+            </div>
+
+            <!-- Список для выбора -->
+            <div class="selection-container">
+                <h3 class="selection-title">Выберите номера лишних предложений:</h3>
+                <p class="selection-subtitle">(можно выбрать несколько вариантов)</p>
+                
+                <div class="numbers-grid">
+                    <!-- Номера 1-11 -->
+                    <div class="number-item" data-number="1">
+                        <span class="number">1</span>
+                        <span class="number-text">Мой лучший друг - это кот по имени Барсик.</span>
+                    </div>
+                    <div class="number-item" data-number="2">
+                        <span class="number">2</span>
+                        <span class="number-text">Он живет у нас уже три года.</span>
+                    </div>
+                    <div class="number-item" data-number="3">
+                        <span class="number">3</span>
+                        <span class="number-text">Барсик очень умный и ласковый кот.</span>
+                    </div>
+                    <div class="number-item" data-number="4">
+                        <span class="number">4</span>
+                        <span class="number-text">Он любит, когда его гладят за ушком и чешут подбородок.</span>
+                    </div>
+                    <div class="number-item" data-number="5">
+                        <span class="number">5</span>
+                        <span class="number-text">Каждый день утром он будит меня, трогая лапкой за щеку.</span>
+                    </div>
+                    <div class="number-item" data-number="6">
+                        <span class="number">6</span>
+                        <span class="number-text">Потом мы завтракаем вместе: я ем кашу, а Барсик получает свой корм.</span>
+                    </div>
+                    <div class="number-item" data-number="7">
+                        <span class="number">7</span>
+                        <span class="number-text">После завтрака он обычно идет к окну и наблюдает за птицами.</span>
+                    </div>
+                    <div class="number-item" data-number="8">
+                        <span class="number">8</span>
+                        <span class="number-text">Моя сестра учится играть на пианино и каждый день упражняется по два часа.</span>
+                    </div>
+                    <div class="number-item" data-number="9">
+                        <span class="number">9</span>
+                        <span class="number-text">Собаки обычно более активны и требуют больше прогулок, чем кошки.</span>
+                    </div>
+                    <div class="number-item" data-number="10">
+                        <span class="number">10</span>
+                        <span class="number-text">Барсик не любит гулять на улице, он настоящий домосед.</span>
+                    </div>
+                </div>
+                
+                <div class="selected-info">
+                    <p>Выбрано: <span id="selected-count">0</span> предложений</p>
+                    <button class="clear-btn" id="clear-btn">Очистить выбор</button>
+                </div>
+            </div>
+
+            <!-- Кнопка завершения -->
+            <div class="action-container">
+                <button class="submit-btn" id="submit-btn">
+                    <i class="fas fa-check-circle"></i> Завершить задание
+                </button>
+            </div>
+
+            <!-- Подсказка -->
+            <div class="hint-box">
+                <h4><i class="fas fa-lightbulb"></i> Подсказка</h4>
+                <p>Лишними являются предложения, которые описывают других людей, животных или общие факты, не связанные непосредственно с котом Барсиком.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальное окно для результата -->
+    <div class="modal-overlay" id="result-modal">
+        <div class="modal-content">
+            <div class="modal-success" id="success-modal" style="display: none;">
+                <div class="modal-icon success-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h2 class="modal-title">Поздравляем!</h2>
+                <p class="modal-text">Вы успешно нашли все лишние предложения!</p>
+                <p class="modal-details">Правильные ответы: предложения 8 и 9</p>
+                <div class="modal-actions">
+                    <button class="modal-btn success-btn" id="next-task-btn">
+                        <i class="fas fa-forward"></i> Все задания пройдены!
+                    </button>
+                    <button class="modal-btn secondary-btn" id="back-to-list-btn">
+                        <i class="fas fa-list"></i> К списку заданий
+                    </button>
+                </div>
+            </div>
+            
+            <div class="modal-failure" id="failure-modal" style="display: none;">
+                <div class="modal-icon failure-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <h2 class="modal-title">Попробуйте еще раз</h2>
+                <p class="modal-text">К сожалению, вы выбрали не все лишние предложения или выбрали лишние.</p>
+                <p class="modal-details">Правильные ответы: предложения 8 и 9</p>
+                <div class="modal-actions">
+                    <button class="modal-btn retry-btn" id="retry-btn">
+                        <i class="fas fa-redo"></i> Попробовать снова
+                    </button>
+                    <button class="modal-btn secondary-btn" id="back-to-list-btn2">
+                        <i class="fas fa-list"></i> К списку заданий
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script-task3_es.js"></script>
+</body>
+</html>

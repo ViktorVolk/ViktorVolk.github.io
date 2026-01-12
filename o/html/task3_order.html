@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3 - Правильный порядок</title>
+    <link rel="stylesheet" href="../style-task1_order.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="order_task.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <span>Задание 3 - Правильный порядок</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Текст задания -->
+            <div class="task-text-container">
+                <h2 class="task-title">Прочитайте текст и расставьте картинки в правильной последовательности:</h2>
+                <div class="text-content">
+                    <p>Растёт в саду яблоня. Ветви яблоня раскинула очень широко. Весной она цветёт душистыми белыми цветами. Летом дерево гордится вкусными плодами. Осенью на яблоне желтеют листья, а потом опадают. Стоит зимой наша яблоня вся в снегу. Трудно ей в холод и мороз.</p>
+                    
+                    <p><strong>Расставьте картинки в правильной последовательности, соответствующей тексту.</strong></p>
+                </div>
+            </div>
+
+            <!-- Область для перетаскивания картинок -->
+            <div class="images-container">
+                <h3 class="images-title">Перетащите картинки в правильном порядке (от первого к последнему):</h3>
+                
+                <div class="images-grid" id="images-grid">
+                    <!-- Картинки будут загружены через JavaScript -->
+                </div>
+                
+                <div class="current-order">
+                    <p>Текущий порядок: <span id="current-order-text">1, 2, 3, 4</span></p>
+                    <button class="reset-btn" id="reset-btn">
+                        <i class="fas fa-redo"></i> Сбросить порядок
+                    </button>
+                </div>
+            </div>
+
+            <!-- Кнопка завершения -->
+            <div class="action-container">
+                <button class="submit-btn" id="submit-btn">
+                    <i class="fas fa-check-circle"></i> Завершить задание
+                </button>
+            </div>
+
+            <!-- Подсказка -->
+            <div class="hint-box">
+                <h4><i class="fas fa-lightbulb"></i> Подсказка</h4>
+                <p>Внимательно прочитайте текст и определите последовательность действий. Обратите внимание на слова "сначала", "затем", "потом", "в завершение".</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальное окно для результата -->
+    <div class="modal-overlay" id="result-modal">
+        <div class="modal-content">
+            <div class="modal-success" id="success-modal" style="display: none;">
+                <div class="modal-icon success-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h2 class="modal-title">Поздравляем!</h2>
+                <p class="modal-text">Вы правильно расставили картинки в последовательности!</p>
+                <p class="modal-details">Правильный порядок: 1 → 2 → 3 → 4</p>
+                <div class="modal-actions">
+                    <button class="modal-btn secondary-btn" id="back-to-list-btn">
+                        <i class="fas fa-list"></i> К списку заданий
+                    </button>
+                </div>
+            </div>
+            
+            <div class="modal-failure" id="failure-modal" style="display: none;">
+                <div class="modal-icon failure-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <h2 class="modal-title">Попробуйте еще раз</h2>
+                <p class="modal-text">К сожалению, порядок картинок не соответствует последовательности в тексте.</p>
+                <p class="modal-details">Правильный порядок: 1 → 2 → 3 → 4</p>
+                <div class="modal-actions">
+                    <button class="modal-btn retry-btn" id="retry-btn">
+                        <i class="fas fa-redo"></i> Попробовать снова
+                    </button>
+                    <button class="modal-btn secondary-btn" id="back-to-list-btn2">
+                        <i class="fas fa-list"></i> К списку заданий
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключаем Sortable.js для перетаскивания -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="../js/script-task3_order.js"></script>
+</body>
+</html>

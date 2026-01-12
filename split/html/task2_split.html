@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2 - Раздели на 2 текста</title>
+    <link rel="stylesheet" href="../style-task1_split.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="task_split.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <span>Задание 2 - Раздели на 2 текста</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Текст задания -->
+            <div class="task-text-container">
+                <h2 class="task-title">Разделите предложения на 2 текста:</h2>
+                <div class="text-content">
+                    <p>Вам дан набор предложений, которые относятся к двум разным историям. Ваша задача - разделить их на две группы так, чтобы каждая группа образовывала связный текст.</p>
+                    
+                    <p><strong>Перетащите предложения в соответствующие колонки:</strong></p>
+                </div>
+            </div>
+
+            <!-- Область с предложениями -->
+            <div class="sentences-container">
+                <h3 class="sentences-title">Перетащите предложения в нужные колонки:</h3>
+                
+                <div class="source-sentences" id="source-sentences">
+                    <!-- Предложения будут загружены через JavaScript -->
+                </div>
+                
+                <div class="columns-container">
+                    <div class="text-column">
+                        <h4 class="column-title">
+                            <i class="fas fa-book"></i> Котёнок
+                            <span class="sentence-count" id="text1-count">0 предложений</span>
+                        </h4>
+                        <div class="column-content" id="text1-column">
+                            <!-- Сюда будут перетаскиваться предложения для текста 1 -->
+                        </div>
+                    </div>
+                    
+                    <div class="text-column">
+                        <h4 class="column-title">
+                            <i class="fas fa-book-open"></i> Про радугу
+                            <span class="sentence-count" id="text2-count">0 предложений</span>
+                        </h4>
+                        <div class="column-content" id="text2-column">
+                            <!-- Сюда будут перетаскиваться предложения для текста 2 -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="controls-container">
+                    <button class="reset-btn" id="reset-btn">
+                        <i class="fas fa-redo"></i> Сбросить все
+                    </button>
+                    <div class="stats">
+                        <p>Всего распределено: <span id="total-distributed">0</span> из <span id="total-sentences">8</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кнопка завершения -->
+            <div class="action-container">
+                <button class="submit-btn" id="submit-btn">
+                    <i class="fas fa-check-circle"></i> Проверить задание
+                </button>
+            </div>
+
+            <!-- Подсказка -->
+            <div class="hint-box">
+                <h4><i class="fas fa-lightbulb"></i> Подсказка</h4>
+                <p>Внимательно читайте предложения. Обращайте внимание на персонажей, места действия, временные рамки и логические связи между предложениями. Предложения одного текста должны быть связаны по смыслу.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальное окно для результата -->
+    <div class="modal-overlay" id="result-modal">
+        <div class="modal-content">
+            <div class="modal-success" id="success-modal" style="display: none;">
+                <div class="modal-icon success-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h2 class="modal-title">Поздравляем!</h2>
+                <p class="modal-text">Вы правильно разделили предложения на 2 текста!</p>
+                <p class="modal-details">Оба текста получились связными и логичными.</p>
+                <div class="modal-actions">
+                    <button class="modal-btn secondary-btn" id="back-to-list-btn">
+                        <i class="fas fa-list"></i> К списку заданий
+                    </button>
+                </div>
+            </div>
+            
+            <div class="modal-failure" id="failure-modal" style="display: none;">
+                <div class="modal-icon failure-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <h2 class="modal-title">Попробуйте еще раз</h2>
+                <p class="modal-text">Не все предложения распределены правильно.</p>
+                <p class="modal-details">Проверьте логические связи между предложениями в каждом тексте.</p>
+                <div class="modal-actions">
+                    <button class="modal-btn retry-btn" id="retry-btn">
+                        <i class="fas fa-redo"></i> Попробовать снова
+                    </button>
+                    <button class="modal-btn secondary-btn" id="back-to-list-btn2">
+                        <i class="fas fa-list"></i> К списку заданий
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключаем Sortable.js для перетаскивания -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="../js/script-task2_split.js"></script>
+</body>
+</html>

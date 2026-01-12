@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2 - Найди лишнее предложение</title>
+    <link rel="stylesheet" href="../style-task1_es.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="extra-sentence.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <span>Задание 2 - Найди лишнее предложение</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Текст задания -->
+            <div class="task-text-container">
+                <h2 class="task-title">Прочитайте текст и найдите лишние предложения:</h2>
+                <div class="text-content">
+                    <p>В субботу наш класс отправился на экскурсию в большой городской зоопарк.
+
+Первыми мы увидели вольер с оранжевыми лисами, которые резво играли друг с другом.</p>
+
+<p>Потом мы подошли к высоким жирафам, которые лениво жевали листья с деревьев.
+
+Моя бабушка любит печь пироги с яблоками по воскресеньям.
+
+Особенно всем понравился пруд, где розовые фламинго стояли на одной ноге.</p>
+
+<p>В аквариуме мы наблюдали, как медленно плавают разноцветные тропические рыбки.
+
+Вчера по телевизору показывали интересный мультфильм про роботов.
+
+После этого мы послушали весёлую лекцию о том, чем питаются обезьяны.</p>
+
+<p>Самый громкий рёв раздался у клетки со львом, у которого была пышная грива.
+
+Мы покормили специальным кормом маленьких козлят в контактном зоопарке.</p>
+
+<p>Завтра на уроке математики мы будем решать задачи на умножение.
+
+В конце экскурсии мы купили на память сувениры – магнитики с животными.
+
+Эта поездка запомнилась мне надолго, потому что я узнал много нового о жизни зверей.</p>
+                    
+                    <p><strong>Найдите предложения, которые не относятся к описанию осени.</strong></p>
+                </div>
+            </div>
+
+            <!-- Список для выбора -->
+            <div class="selection-container">
+                <h3 class="selection-title">Выберите номера лишних предложений:</h3>
+                <p class="selection-subtitle">(можно выбрать несколько вариантов)</p>
+                
+                <div class="numbers-grid">
+                    <!-- Номера 1-11 -->
+                    <div class="number-item" data-number="1">
+                        <span class="number">1</span>
+                        <span class="number-text">В субботу наш класс отправился на экскурсию в большой городской зоопарк.</span>
+                    </div>
+                    <div class="number-item" data-number="2">
+                        <span class="number">2</span>
+                        <span class="number-text">Первыми мы увидели вольер с оранжевыми лисами, которые резво играли друг с другом.</span>
+                    </div>
+                    <div class="number-item" data-number="3">
+                        <span class="number">3</span>
+                        <span class="number-text">Моя бабушка любит печь пироги с яблоками по воскресеньям.</span>
+                    </div>
+                    <div class="number-item" data-number="4">
+                        <span class="number">4</span>
+                        <span class="number-text">Особенно всем понравился пруд, где розовые фламинго стояли на одной ноге.</span>
+                    </div>
+                    <div class="number-item" data-number="5">
+                        <span class="number">5</span>
+                        <span class="number-text">В аквариуме мы наблюдали, как медленно плавают разноцветные тропические рыбки.</span>
+                    </div>
+                    <div class="number-item" data-number="6">
+                        <span class="number">6</span>
+                        <span class="number-text">Вчера по телевизору показывали интересный мультфильм про роботов.</span>
+                    </div>
+                    <div class="number-item" data-number="7">
+                        <span class="number">7</span>
+                        <span class="number-text">После этого мы послушали весёлую лекцию о том, чем питаются обезьяны.</span>
+                    </div>
+                    <div class="number-item" data-number="8">
+                        <span class="number">8</span>
+                        <span class="number-text">Самый громкий рёв раздался у клетки со львом, у которого была пышная грива.</span>
+                    </div>
+                    <div class="number-item" data-number="9">
+                        <span class="number">9</span>
+                        <span class="number-text">Завтра на уроке математики мы будем решать задачи на умножение.</span>
+                    </div>
+                    <div class="number-item" data-number="10">
+                        <span class="number">10</span>
+                        <span class="number-text">Эта поездка запомнилась мне надолго, потому что я узнал много нового о жизни зверей.
+
+</span>
+                    </div>
+                </div>
+                
+                <div class="selected-info">
+                    <p>Выбрано: <span id="selected-count">0</span> предложений</p>
+                    <button class="clear-btn" id="clear-btn">Очистить выбор</button>
+                </div>
+            </div>
+
+            <!-- Кнопка завершения -->
+            <div class="action-container">
+                <button class="submit-btn" id="submit-btn">
+                    <i class="fas fa-check-circle"></i> Завершить задание
+                </button>
+            </div>
+
+            <!-- Подсказка -->
+            <div class="hint-box">
+                <h4><i class="fas fa-lightbulb"></i> Подсказка</h4>
+                <p>Лишними являются предложения, которые описывают другие времена года или события, не связанные с осенью.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальное окно для результата -->
+    <div class="modal-overlay" id="result-modal">
+        <div class="modal-content">
+            <div class="modal-success" id="success-modal" style="display: none;">
+                <div class="modal-icon success-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h2 class="modal-title">Поздравляем!</h2>
+                <p class="modal-text">Вы успешно нашли все лишние предложения!</p>
+                <p class="modal-details">Правильные ответы: предложения 9 и 10</p>
+                <div class="modal-actions">
+                    <button class="modal-btn secondary-btn" id="back-to-list-btn">
+                        <i class="fas fa-list"></i> К списку заданий
+                    </button>
+                </div>
+            </div>
+            
+            <div class="modal-failure" id="failure-modal" style="display: none;">
+                <div class="modal-icon failure-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <h2 class="modal-title">Попробуйте еще раз</h2>
+                <p class="modal-text">К сожалению, вы выбрали не все лишние предложения или выбрали лишние.</p>
+                <p class="modal-details">Правильные ответы: предложения 9 и 10</p>
+                <div class="modal-actions">
+                    <button class="modal-btn retry-btn" id="retry-btn">
+                        <i class="fas fa-redo"></i> Попробовать снова
+                    </button>
+                    <button class="modal-btn secondary-btn" id="back-to-list-btn2">
+                        <i class="fas fa-list"></i> К списку заданий
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script-task2_es.js"></script>
+</body>
+</html>

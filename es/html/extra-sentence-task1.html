@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1 - Найди лишние предложения</title>
+    <link rel="stylesheet" href="../style-task1_es.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="extra-sentence.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <span>Задание 1 - Найди лишние предложения</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Текст задания -->
+            <div class="task-text-container">
+                <h2 class="task-title">Прочитайте текст и найдите лишние предложения:</h2>
+                <div class="text-content">
+                    <p>Вчера был прекрасный солнечный день. Я решил прогуляться по парку. Рыбак перекладывал пойманную рыбу в мешок, чтобы пойти домой. Вдруг я увидел белочку, которая прыгала с ветки на ветку. Она была такая пушистая и забавная!</p>
+                    
+                    <p>Потом я пошел к озеру. Ночью бабочки прячутся и засыпают. Я увидел, как рыбы плавают у поверхности. Один мальчик кормил уток хлебом. Утки весело крякали и боролись за кусочки.</p>
+                    
+                    <p>После прогулки я зашел в кафе и выпил чашку горячего шоколада. Вечером я вернулся домой и посмотрел интересный фильм. Моя кошка Мурка встретила меня у двери. Она любит, когда я ей чешу за ушком.</p>
+                    
+                    <p><strong>Найдите предложения, которые не относятся к рассказу о прогулке в парке.</strong></p>
+                </div>
+            </div>
+
+            <!-- Список для выбора -->
+            <div class="selection-container">
+                <h3 class="selection-title">Выберите номера лишних предложений:</h3>
+                <p class="selection-subtitle">(можно выбрать несколько вариантов)</p>
+                
+                <div class="numbers-grid">
+                    <!-- Номера 1-11 -->
+                    <div class="number-item" data-number="1">
+                        <span class="number">1</span>
+                        <span class="number-text">Вчера был прекрасный солнечный день.</span>
+                    </div>
+                    <div class="number-item" data-number="2">
+                        <span class="number">2</span>
+                        <span class="number-text">Я решил прогуляться по парку.</span>
+                    </div>
+                    <div class="number-item" data-number="3">
+                        <span class="number">3</span>
+                        <span class="number-text">Рыбак перекладывал пойманную рыбу в мешок, чтобы пойти домой.</span>
+                    </div>
+                    <div class="number-item" data-number="4">
+                        <span class="number">4</span>
+                        <span class="number-text">Вдруг я увидел белочку, которая прыгала с ветки на ветку.</span>
+                    </div>
+                    <div class="number-item" data-number="5">
+                        <span class="number">5</span>
+                        <span class="number-text">Она была такая пушистая и забавная!</span>
+                    </div>
+                    <div class="number-item" data-number="6">
+                        <span class="number">6</span>
+                        <span class="number-text">Потом я пошел к озеру.</span>
+                    </div>
+                    <div class="number-item" data-number="7">
+                        <span class="number">7</span>
+                        <span class="number-text">Ночью бабочки прячутся и засыпают.</span>
+                    </div>
+                    <div class="number-item" data-number="8">
+                        <span class="number">8</span>
+                        <span class="number-text">Я увидел, как рыбы плавают у поверхности.</span>
+                    </div>
+                    <div class="number-item" data-number="9">
+                        <span class="number">9</span>
+                        <span class="number-text">Один мальчик кормил уток хлебом.</span>
+                    </div>
+                    <div class="number-item" data-number="10">
+                        <span class="number">10</span>
+                        <span class="number-text">Вечером я вернулся домой и посмотрел интересный фильм.</span>
+                    </div>
+                </div>
+                
+                <div class="selected-info">
+                    <p>Выбрано: <span id="selected-count">0</span> предложений</p>
+                    <button class="clear-btn" id="clear-btn">Очистить выбор</button>
+                </div>
+            </div>
+
+            <!-- Кнопка завершения -->
+            <div class="action-container">
+                <button class="submit-btn" id="submit-btn">
+                    <i class="fas fa-check-circle"></i> Завершить задание
+                </button>
+            </div>
+
+            <!-- Подсказка -->
+            <div class="hint-box">
+                <h4><i class="fas fa-lightbulb"></i> Подсказка</h4>
+                <p>Лишними являются предложения, которые нарушают последовательность рассказа о прогулке в парке или содержат информацию, не относящуюся непосредственно к прогулке.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальное окно для результата -->
+    <div class="modal-overlay" id="result-modal">
+        <div class="modal-content">
+            <div class="modal-success" id="success-modal" style="display: none;">
+                <div class="modal-icon success-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h2 class="modal-title">Поздравляем!</h2>
+                <p class="modal-text">Вы успешно нашли все лишние предложения!</p>
+                <p class="modal-details">Правильные ответы: предложения 3 и 6</p>
+                <div class="modal-actions">
+                    <button class="modal-btn secondary-btn" id="back-to-list-btn">
+                        <i class="fas fa-list"></i> К списку заданий
+                    </button>
+                </div>
+            </div>
+            
+            <div class="modal-failure" id="failure-modal" style="display: none;">
+                <div class="modal-icon failure-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <h2 class="modal-title">Попробуйте еще раз</h2>
+                <p class="modal-text">К сожалению, вы выбрали не все лишние предложения или выбрали лишние.</p>
+                <p class="modal-details">Правильные ответы: предложения 3 и 6</p>
+                <div class="modal-actions">
+                    <button class="modal-btn retry-btn" id="retry-btn">
+                        <i class="fas fa-redo"></i> Попробовать снова
+                    </button>
+                    <button class="modal-btn secondary-btn" id="back-to-list-btn2">
+                        <i class="fas fa-list"></i> К списку заданий
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script-task1_es.js"></script>
+</body>
+</html>

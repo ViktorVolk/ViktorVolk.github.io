@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1 - Изложение</title>
+    <link rel="stylesheet" href="../style-task1_dictation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="task_dictation.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <span>Задание 1 - Изложение</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Текст задания -->
+            <div class="task-text-container">
+                <h2 class="task-title">Прослушайте текст и напишите изложение:</h2>
+                <div class="text-content">
+                    <p><strong>Инструкция:</strong> Прослушайте аудиозапись. Во время прослушивания вы можете делать заметки. После прослушивания напишите изложение в своей тетради, стараясь передать основное содержание текста.</p>
+                    
+                    <p>Для помощи в понимании текста, ниже представлены картинки, которые проиллюстрируют основные моменты. Нажмите на каждую картинку, чтобы посмотреть ее.</p>
+                </div>
+            </div>
+
+            <!-- Аудиоплеер -->
+            <div class="audio-container">
+                <h3 class="audio-title"><i class="fas fa-headphones"></i> Аудиозапись текста:</h3>
+                
+                <div class="audio-player">
+                    <div class="audio-info">
+                        <div class="audio-title-small">Текст для изложения</div>
+                        <div class="audio-duration" id="audio-duration">00:00</div>
+                    </div>
+                    
+                    <div class="audio-controls">
+                        <button class="audio-btn" id="play-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="audio-btn" id="pause-btn" disabled>
+                            <i class="fas fa-pause"></i>
+                        </button>
+                        <button class="audio-btn" id="stop-btn">
+                            <i class="fas fa-stop"></i>
+                        </button>
+                        <button class="audio-btn" id="restart-btn">
+                            <i class="fas fa-redo"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <div class="progress-time" id="current-time">00:00</div>
+                    </div>
+                    
+                    <div class="volume-control">
+                        <i class="fas fa-volume-up"></i>
+                        <input type="range" id="volume-slider" min="0" max="100" value="70">
+                        <span id="volume-percent">70%</span>
+                    </div>
+                </div>
+                
+                <div class="playback-info">
+                    <p><i class="fas fa-info-circle"></i> Вы можете прослушать запись несколько раз. Рекомендуется сначала прослушать весь текст, затем сделать паузу для заметок.</p>
+                </div>
+            </div>
+
+            <!-- Картинки для помощи -->
+            <div class="images-container">
+                <h3 class="images-title"><i class="fas fa-images"></i> Визуальные подсказки (нажмите для просмотра):</h3>
+                <p class="images-subtitle">Эти картинки помогут вам лучше понять содержание текста.</p>
+                
+                <div class="images-grid" id="images-grid">
+                    <!-- Картинки будут загружены через JavaScript -->
+                </div>
+            </div>
+
+            <!-- Инструкция для ученика -->
+            <div class="instruction-container">
+                <h4><i class="fas fa-pencil-alt"></i> Что делать после прослушивания:</h4>
+                <ol class="instruction-steps">
+                    <li>Возьмите чистый лист бумаги или тетрадь</li>
+                    <li>Напишите дату и тему "Изложение"</li>
+                    <li>Внимательно перечитайте свои заметки</li>
+                    <li>Напишите изложение, передавая основное содержание текста</li>
+                    <li>Соблюдайте структуру: введение, основная часть, заключение</li>
+                    <li>Проверьте орфографию и пунктуацию</li>
+                </ol>
+                
+                <div class="time-info">
+                    <p><i class="fas fa-clock"></i> <strong>Рекомендуемое время:</strong> 30-40 минут</p>
+                </div>
+            </div>
+
+            <!-- Кнопка завершения (без проверки) -->
+            <div class="action-container">
+                <button class="complete-btn" id="complete-btn">
+                    <i class="fas fa-check-circle"></i> Задание выполнено
+                </button>
+                <p class="completion-note">Нажмите эту кнопку, когда закончите писать изложение в тетради.</p>
+            </div>
+
+            <!-- Подсказка -->
+            <div class="hint-box">
+                <h4><i class="fas fa-lightbulb"></i> Советы по написанию изложения:</h4>
+                <ul class="hint-list">
+                    <li>Слушайте текст внимательно, обращайте внимание на ключевые слова</li>
+                    <li>Записывайте основные события в хронологическом порядке</li>
+                    <li>Используйте картинки как визуальные подсказки</li>
+                    <li>Не пытайтесь запомнить текст дословно, передавайте смысл</li>
+                    <li>После написания перечитайте изложение, проверьте логику повествования</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальное окно для картинок -->
+    <div class="modal-overlay" id="image-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-image-container">
+                <img id="modal-image" src="" alt="Увеличенное изображение">
+            </div>
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </div>
+
+    <!-- Модальное окно завершения -->
+    <div class="modal-overlay" id="completion-modal">
+        <div class="modal-content completion-modal">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="modal-title">Задание принято!</h2>
+            <p class="modal-text">Вы отметили задание "Изложение" как выполненное.</p>
+            <p class="modal-details">Не забудьте сдать тетрадь с изложением учителю на проверку.</p>
+            <div class="modal-actions">
+                <button class="modal-btn secondary-btn" id="back-to-list-btn">
+                    <i class="fas fa-list"></i> К списку заданий
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Аудио элемент (скрытый) -->
+    <audio id="audio-player" preload="metadata">
+        <!-- Источник аудио будет установлен через JavaScript -->
+    </audio>
+
+    <script src="../js/script-task1_dictation.js"></script>
+</body>
+</html>

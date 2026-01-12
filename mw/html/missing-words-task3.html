@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3 - Вставьте пропущенные слова</title>
+    <link rel="stylesheet" href="../style-missing-words1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="missing-words.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <span>Задание 3 - Вставьте пропущенные слова</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Инструкция -->
+            <div class="instruction-box">
+                <h3><i class="fas fa-info-circle"></i> Как выполнять задание:</h3>
+                <p>Перетащите слова из нижней панели в пропуски в тексте. Когда все слова будут на своих местах, нажмите кнопку "Проверить".</p>
+            </div>
+
+            <!-- Текст с пропусками -->
+            <div class="text-container">
+                <h2 class="task-title">Вставьте пропущенные слова в текст:</h2>
+                <div class="text-with-gaps">
+                    <p>Наступила долгожданная <span class="gap" data-correct="зима" data-id="1">______</span>. 
+                    Выпал пушистый <span class="gap" data-correct="снег" data-id="2">______</span>, 
+                    который покрыл все вокруг белым <span class="gap" data-correct="одеялом" data-id="3">______</span>. 
+                    Деревья стояли в красивых <span class="gap" data-correct="снежных" data-id="4">______</span> 
+                    шапках, а на <span class="gap" data-correct="крышах" data-id="5">______</span> 
+                    домов сверкали сосульки.</p>
+                    
+                    <p>Мы с друзьями вышли во <span class="gap" data-correct="двор" data-id="6">______</span> 
+                    играть в <span class="gap" data-correct="снежки" data-id="7">______</span>. 
+                    Потом мы слепили большую <span class="gap" data-correct="снежную" data-id="8">______</span> 
+                    бабу и дали ей вместо <span class="gap" data-correct="носа" data-id="9">______</span> 
+                    морковку. Руки у нас были <span class="gap" data-correct="красные" data-id="10">______</span> 
+                    от холода, но мы этого почти не <span class="gap" data-correct="замечали" data-id="11">______</span>.</p>
+                    
+                    <p>Вечером мама приготовила горячий <span class="gap" data-correct="чай" data-id="12">______</span> 
+                    с <span class="gap" data-correct="малиновым" data-id="13">______</span> вареньем. 
+                    Мы сидели у <span class="gap" data-correct="окна" data-id="14">______</span> 
+                    и смотрели, как падают <span class="gap" data-correct="снежинки" data-id="15">______</span>. 
+                    Это был самый <span class="gap" data-correct="лучший" data-id="16">______</span> 
+                    день этой <span class="gap" data-correct="зимы" data-id="17">______</span>.</p>
+                </div>
+            </div>
+
+            <!-- Слова для перетаскивания -->
+            <div class="words-container">
+                <h3 class="words-title">Слова для вставки:</h3>
+                <div class="words-pool" id="words-pool">
+                    <!-- Слова будут добавляться динамически -->
+                </div>
+                <div class="words-info">
+                    <p>Перетащите слова в пропуски в тексте</p>
+                    <button class="reset-btn" id="reset-btn">
+                        <i class="fas fa-redo"></i> Начать заново
+                    </button>
+                </div>
+            </div>
+
+            <!-- Кнопка проверки -->
+            <div class="action-container">
+                <button class="submit-btn" id="submit-btn">
+                    <i class="fas fa-check-circle"></i> Проверить
+                </button>
+                <div class="progress-info">
+                    <p>Заполнено: <span id="filled-count">0</span> из <span id="total-gaps">17</span> пропусков</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Подсказка -->
+            <div class="hint-box">
+                <h4><i class="fas fa-lightbulb"></i> Подсказка</h4>
+                <p>Обращайте внимание на зимнюю тематику, согласование прилагательных с существительными и последовательность событий.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальное окно для результата -->
+    <div class="modal-overlay" id="result-modal">
+        <div class="modal-content">
+            <div class="modal-success" id="success-modal" style="display: none;">
+                <div class="modal-icon success-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h2 class="modal-title">Великолепно!</h2>
+                <p class="modal-text">Все слова вставлены правильно!</p>
+                <p class="modal-details">Зимний рассказ восстановлен полностью</p>
+                <div class="modal-actions">
+                    <button class="modal-btn success-btn" id="next-task-btn">
+                        <i class="fas fa-forward"></i> Все задания пройдены!
+                    </button>
+                    <button class="modal-btn secondary-btn" id="back-to-list-btn">
+                        <i class="fas fa-list"></i> К списку заданий
+                    </button>
+                </div>
+            </div>
+            
+            <div class="modal-failure" id="failure-modal" style="display: none;">
+                <div class="modal-icon failure-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <h2 class="modal-title">Есть ошибки</h2>
+                <p class="modal-text">Некоторые слова вставлены неправильно или не все пропуски заполнены.</p>
+                <p class="modal-details" id="error-details"></p>
+                <div class="modal-actions">
+                    <button class="modal-btn retry-btn" id="retry-btn">
+                        <i class="fas fa-redo"></i> Попробовать снова
+                    </button>
+                    <button class="modal-btn secondary-btn" id="back-to-list-btn2">
+                        <i class="fas fa-list"></i> К списку заданий
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script-missing-words3.js"></script>
+</body>
+</html>
