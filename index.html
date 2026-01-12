@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="/main/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-home"></i>
+                <span>Главная страница</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="main-title">Выберите задание</h1>
+            <p class="subtitle">Нажмите на одну из плиток, чтобы перейти к выполнению</p>
+            
+            <div class="tiles-container">
+                <!-- Плитка "Правильный порядок" -->
+                <a href="../o/html/order_task.html" class="tile" id="order-tile"> 
+                    <div class="tile-icon">
+                        <i class="fas fa-sort-numeric-down"></i>
+                    </div>
+                    <h2 class="tile-title">Правильный порядок</h2>
+                    <p class="tile-description">Расставьте изображения в правильном порядке</p>
+                    <div class="tile-footer">
+                        <span class="tile-button">Начать</span>
+                    </div>
+                    <div class="tile-image" style="background-image: url('https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png')"></div>
+                </a>
+                
+                <!-- Плитка "Изложение" -->
+                <a href="../dict/html/task_dictation.html" class="tile" id="presentation-tile">
+                    <div class="tile-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h2 class="tile-title">Изложение</h2>
+                    <p class="tile-description">Напишите изложение по прослушанному тексту</p>
+                    <div class="tile-footer">
+                        <span class="tile-button">Начать</span>
+                    </div>
+                    <div class="tile-image" style="background-image: url('https://cdn.pixabay.com/photo/2016/09/08/22/43/books-1655783_1280.jpg')"></div>
+                </a>
+
+                <!-- Плитка "Найди лишнее предложение" -->
+                <a href="../es/html/extra-sentence.html" class="tile" id="extra-sentence-tile">
+                    <div class="tile-icon">
+                        <i class="fas fa-search-minus"></i>
+                    </div>
+                    <h2 class="tile-title">Найди лишние предложения</h2>
+                    <p class="tile-description">Найдите предложения, которые не относятся к тексту</p>
+                    <div class="tile-footer">
+                        <span class="tile-button">Начать</span>
+                    </div>
+                    <div class="tile-image" style="background-image: url('https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839877_1280.jpg')"></div>
+                </a>
+
+                <!-- Плитка "Раздели на два текста" -->
+                <a href="../split/html/task_split.html" class="tile" id="split-texts-tile">
+                    <div class="tile-icon">
+                        <i class="fas fa-columns"></i>
+                    </div>
+                    <h2 class="tile-title">Раздели на два текста</h2>
+                    <p class="tile-description">Распределите перепутанные предложения на 2 текста</p>
+                    <div class="tile-footer">
+                        <span class="tile-button">Начать</span>
+                    </div>
+                    <div class="tile-image" style="background-image: url('https://cdn.pixabay.com/photo/2016/02/19/11/19/office-1209640_1280.jpg')"></div>
+                </a>
+                
+                <!-- Плитка "Вставь пропущенные слова" -->
+                <a href="../mw/html/missing-words.html" class="tile" id="missing-words-tile">
+                    <div class="tile-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h2 class="tile-title">Вставь пропущенные слова</h2>
+                    <p class="tile-description">Вставьте подходящие по смыслу слова</p>
+                    <div class="tile-footer">
+                        <span class="tile-button">Начать</span>
+                    </div>
+                    <div class="tile-image" style="background-image: url('https://cdn.pixabay.com/photo/2017/08/06/13/09/people-2590564_1280.jpg')"></div>
+                </a>
+                
+                <!-- Плитка "Картинки по описанию" -->
+                <a href="../s/html/task_select.html" class="tile" id="pictures-description-tile">
+                    <div class="tile-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h2 class="tile-title">Картинки по описанию</h2>
+                    <p class="tile-description">Найдите картинку, подходящую по описанию</p>
+                    <div class="tile-footer">
+                        <span class="tile-button">Начать</span>
+                    </div>
+                    <div class="tile-image" style="background-image: url('https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_1280.jpg')"></div>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
